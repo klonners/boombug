@@ -94,3 +94,12 @@ main{width:min(100%,650px);position:relative}header,.stats,.controls,.help{displ
 .arena.quick-open .pauseMenu{opacity:0!important;visibility:hidden!important;pointer-events:none!important;transform:translateX(8px)!important}
 .pauseMenu button{min-height:54px;padding:10px 14px!important}
 @media(max-width:390px){.pauseMenu{right:132px!important;top:14px!important}.pauseMenu button{min-height:48px;padding:8px 10px!important}}
+
+/* Restart matches the other round icon controls, with its label underneath. */
+.pauseMenu{width:74px!important;display:flex;flex-direction:column;align-items:center;gap:5px;top:14px!important;right:146px!important;transform:translateX(8px)!important}
+.pauseMenu.visible{transform:translateX(0)!important}
+.pauseMenu button{width:74px!important;min-height:0!important;padding:0!important;display:flex!important;flex-direction:column!important;align-items:center!important;gap:5px!important;background:transparent!important;border:0!important;box-shadow:none!important;white-space:normal!important}
+.pauseMenu .restartIcon{width:54px;height:54px;display:grid;place-items:center;border-radius:50%;background:linear-gradient(145deg,#244a5b,#102a39);border:2px solid #73f5cd99;box-shadow:0 5px 16px #0006,inset 0 1px 0 #ffffff25;font-size:32px!important;line-height:1;color:#fff}
+.pauseMenu .restartLabel{display:block;font-size:.7rem;font-weight:800;line-height:1.15;color:#edfaff;text-shadow:0 1px 5px #000}
+.arena.quick-open .pauseMenu{opacity:0!important;visibility:hidden!important;pointer-events:none!important;transform:translateX(8px)!important}
+@media(max-width:390px){.pauseMenu{right:132px!important;top:14px!important;width:62px!important}.pauseMenu button{width:62px!important}.pauseMenu .restartIcon{width:46px;height:46px;font-size:28px!important}.pauseMenu .restartLabel{font-size:.65rem}}
