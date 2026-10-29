@@ -172,7 +172,7 @@ main{width:min(100%,650px);position:relative}header,.stats,.controls,.help{displ
 .shopPanel::before,.settingsPanel::before,.userSettingsPanel::before,.skinPanel::before{
   content:"";
   position:absolute;
-  top:-9px;
+  top:-4px;
   right:var(--panel-pointer-right,24px);
   width:15px;height:15px;
   background:#081a27f7;
