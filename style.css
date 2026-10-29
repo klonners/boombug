@@ -58,3 +58,17 @@ main{width:min(100%,650px);position:relative}header,.stats,.controls,.help{displ
 .customSfxActions{display:flex;gap:8px}
 .customSfxActions button{border:1px solid #ffffff25;border-radius:10px;background:#15394a;color:#edfaff;padding:8px 12px;font-weight:750}
 .customSfxActions button:disabled{opacity:.4}
+
+/* Final quick menu layout: pause beside dots while closed; large circular icons when open. */
+.pauseBtn{right:82px!important;z-index:5}
+.moreBtn{right:14px!important;z-index:8}
+.arena.quick-open .pauseBtn{opacity:0!important;transform:scale(.65)!important;pointer-events:none!important}
+.moreMenu{top:88px!important;right:12px!important;left:12px!important;width:auto!important;max-width:none!important;display:flex!important;justify-content:space-evenly;align-items:flex-start;gap:8px;padding:10px 2px!important;background:transparent!important;border:0!important;box-shadow:none!important;visibility:hidden;opacity:0;pointer-events:none;transform:translateY(-8px) scale(.96)}
+.arena.quick-open .moreMenu{visibility:visible;opacity:1;pointer-events:auto;transform:translateY(0) scale(1)}
+.moreMenu button{display:flex!important;flex:1 1 0;min-width:0;max-width:112px;width:auto!important;padding:0!important;gap:8px;flex-direction:column;align-items:center;text-align:center;background:transparent!important;border:0!important;box-shadow:none!important;white-space:normal!important;font:700 .78rem/1.15 system-ui!important;color:#fff!important}
+.quickIcon{width:68px;height:68px;display:grid;place-items:center;border-radius:50%;background:linear-gradient(145deg,#244a5b,#102a39);border:2px solid #73f5cd99;box-shadow:0 5px 16px #0006,inset 0 1px 0 #ffffff25;font-size:31px;line-height:1;transition:transform .22s ease,background .22s ease}
+#menuRestart .quickIcon{font-size:39px;font-weight:400}
+.moreMenu button:hover .quickIcon,.moreMenu button:focus-visible .quickIcon{transform:translateY(-3px) scale(1.05);background:linear-gradient(145deg,#286a70,#15394a)}
+.quickLabel{display:block;max-width:100%;font-size:.78rem;font-weight:800;color:#edfaff;text-shadow:0 1px 5px #000}
+@media(max-width:390px){.pauseBtn{right:72px!important;width:52px;height:52px}.moreBtn{right:12px!important;width:52px;height:52px}.moreMenu{top:76px!important;left:8px!important;right:8px!important;gap:4px}.quickIcon{width:62px;height:62px;font-size:28px}.quickLabel{font-size:.72rem}}
+@media(prefers-reduced-motion:reduce){.quickIcon{transition:none}}
