@@ -86,3 +86,11 @@ main{width:min(100%,650px);position:relative}header,.stats,.controls,.help{displ
 .pauseMenu button span{font-size:1.35rem}
 .arena.quick-open .pauseBtn{opacity:0!important;pointer-events:none!important}
 @media(max-width:390px){.moreMenu{right:70px!important;max-width:calc(100% - 92px)!important;gap:3px!important}.moreMenu button{width:62px!important}.quickIcon{width:46px!important;height:46px!important;font-size:22px!important}.quickLabel{font-size:.65rem!important}.pauseMenu{right:70px;top:76px}}
+
+
+/* Restart is a left-side companion to the pause control. It tracks pause visibility. */
+.pauseMenu{top:14px!important;right:146px!important;left:auto!important;transform:translateX(8px)!important}
+.pauseMenu.visible{transform:translateX(0)!important}
+.arena.quick-open .pauseMenu{opacity:0!important;visibility:hidden!important;pointer-events:none!important;transform:translateX(8px)!important}
+.pauseMenu button{min-height:54px;padding:10px 14px!important}
+@media(max-width:390px){.pauseMenu{right:132px!important;top:14px!important}.pauseMenu button{min-height:48px;padding:8px 10px!important}}
