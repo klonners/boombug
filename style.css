@@ -198,3 +198,21 @@ main{width:min(100%,650px);position:relative}header,.stats,.controls,.help{displ
   .shopPanel{--panel-pointer-right:219px}
   .skinPanel{--panel-pointer-right:284px}
 }
+
+/* Settings sound controls: grouped sections, dropdowns and sliding toggles. */
+.soundSection{display:grid;gap:14px}
+.soundSectionTitle{font-size:1rem;font-weight:900;letter-spacing:.06em;padding-bottom:10px;border-bottom:1px solid #ffffff24}
+.soundFeature{padding:12px;border:1px solid #ffffff1b;border-radius:14px;background:#0d2635}
+.soundToggleRow{padding:0 0 12px!important;border-top:0!important;border-bottom:1px solid #ffffff18;font-size:.95rem}
+.soundToggleRow input{appearance:none!important;-webkit-appearance:none!important;width:46px!important;height:26px!important;flex:0 0 46px;border:1px solid #6e8792!important;border-radius:999px;background:#334854!important;position:relative;cursor:pointer;transition:background .2s,border-color .2s}
+.soundToggleRow input::before{content:"";position:absolute;left:3px;top:3px;width:18px;height:18px;border-radius:50%;background:#eafaff;box-shadow:0 1px 4px #0007;transition:transform .2s}
+.soundToggleRow input:checked{background:#35b99a!important;border-color:#73f5cd!important}
+.soundToggleRow input:checked::before{transform:translateX(20px)}
+.soundSubLabel{display:block;margin:12px 0 7px;color:#a9c4d0;font-size:.78rem;font-weight:750}
+.soundSelect{display:block;width:100%;padding:11px 36px 11px 12px;border:1px solid #ffffff25;border-radius:10px;background:#173546;color:#edfaff;font:700 .85rem system-ui;outline:none}
+.soundSelect:focus{border-color:#73f5cd}
+.soundSelect option{background:#102b3a;color:#edfaff}
+.soundFeature .customSfx{margin-top:9px;padding:10px 0 0;border-top:1px solid #ffffff14}
+.soundFeature .customSfx>label{font-size:.82rem}
+.soundSection>.settingRow{padding-top:12px}
+@media(max-width:390px){.soundFeature{padding:10px}.soundSelect{padding:10px;font-size:.8rem}}
