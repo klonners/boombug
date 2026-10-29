@@ -49,7 +49,7 @@ ctx.fillStyle='#343532';ctx.beginPath();ctx.ellipse(240,452,21,11,0,0,Math.PI*2)
 ctx.save();ctx.translate(nozzle.x,nozzle.y);ctx.rotate(holding&&running&&fuel>0?Math.atan2(aim.y-nozzle.y,aim.x-nozzle.x)+Math.PI/2:0);ctx.translate(-nozzle.x,-nozzle.y);ctx.fillStyle='#a86f52';ctx.beginPath();ctx.roundRect(222,500,36,108,12);ctx.fill();const skin=ctx.createLinearGradient(222,0,258,0);skin.addColorStop(0,'#9e6248');skin.addColorStop(.28,'#f0b995');skin.addColorStop(.6,'#d99a76');skin.addColorStop(1,'#a66b50');ctx.fillStyle=skin;ctx.beginPath();ctx.roundRect(226,500,28,100,10);ctx.fill();ctx.fillStyle='#f0b995';ctx.beginPath();ctx.ellipse(240,501,25,8,0,0,Math.PI*2);ctx.fill();
 // Two small skin-toned circles beside the lower rod.
 ctx.fillStyle='#c98c6b';ctx.beginPath();ctx.ellipse(207,572,15,18,-.18,0,Math.PI*2);ctx.fill();ctx.ellipse(273,572,15,18,.18,0,Math.PI*2);ctx.fill();ctx.fillStyle='#e5aa86';ctx.beginPath();ctx.ellipse(204,568,7,10,-.18,0,Math.PI*2);ctx.fill();ctx.ellipse(270,568,7,10,.18,0,Math.PI*2);ctx.fill();ctx.restore();
-ctx.fillStyle='#4b392b';ctx.font='800 14px system-ui';ctx.textAlign='center';ctx.fillText('AIM AT THE FLY',240,147);ctx.fillStyle='#655448';ctx.font='11px system-ui';ctx.fillText('AIM UP FROM THE BOTTOM',240,163);
+
 // Player-side pee source at the bottom edge: the stream begins here and travels upward.
 ctx.save();ctx.fillStyle='#d6b6a1';ctx.beginPath();ctx.ellipse(240,590,23,15,0,0,Math.PI*2);ctx.fill();ctx.fillStyle='#b78d77';ctx.beginPath();ctx.ellipse(240,585,10,5,0,0,Math.PI*2);ctx.fill();ctx.restore();
 // Small glossy poop placed down by the drain/flush point, not in the bowl's centre.
