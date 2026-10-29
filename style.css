@@ -129,3 +129,22 @@ main{width:min(100%,650px);position:relative}header,.stats,.controls,.help{displ
   border-color:#ffffff40!important;
   transform:none!important;
 }
+
+
+/* Ensure shopping and user-settings symbols render clearly in the quick menu. */
+.moreMenu .quickIcon .cartIcon,
+.moreMenu .quickIcon .userGearIcon{
+  display:block!important;
+  font-style:normal!important;
+  font-size:25px!important;
+  line-height:1!important;
+  color:#fff!important;
+}
+.moreMenu .quickIcon .userGearFallback{display:none}
+@supports not (font-family: "uicons-regular-straight"){
+  .moreMenu .quickIcon .userGearIcon{display:none!important}
+  .moreMenu .quickIcon .userGearFallback{display:block!important;color:#fff;font-size:28px;line-height:1}
+}
+@media(max-width:390px){
+  .moreMenu .quickIcon .cartIcon,.moreMenu .quickIcon .userGearIcon{font-size:22px!important}
+}
