@@ -115,3 +115,9 @@ main{width:min(100%,650px);position:relative}header,.stats,.controls,.help{displ
 @media(max-width:390px){.menuDots,.menuCross{font-size:23px;width:26px;height:26px}}
 
 .shopBtn .cartIcon{font-size:27px;line-height:1;display:block;font-style:normal}
+
+
+/* Show the shopping cart control beside the other top controls. */
+.shopBtn{display:grid!important;right:236px!important;top:14px!important;width:58px;height:58px;z-index:5}
+.shopBtn .cartIcon{font-size:27px;line-height:1;display:block;font-style:normal}
+@media(max-width:390px){.shopBtn{right:202px!important;width:52px;height:52px}}
