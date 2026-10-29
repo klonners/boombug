@@ -115,3 +115,17 @@ main{width:min(100%,650px);position:relative}header,.stats,.controls,.help{displ
 @media(max-width:390px){.menuDots,.menuCross{font-size:23px;width:26px;height:26px}}
 
 .shopBtn .cartIcon{font-size:27px;line-height:1;display:block;font-style:normal}
+
+
+/* Match quick-menu icon borders to the neutral pause and three-dot controls. */
+.moreMenu .quickIcon{
+  background:#25231ee8!important;
+  border:2px solid #ffffff40!important;
+  box-shadow:0 2px 8px #0005!important;
+}
+.moreMenu button:hover .quickIcon,
+.moreMenu button:focus-visible .quickIcon{
+  background:#25231ee8!important;
+  border-color:#ffffff40!important;
+  transform:none!important;
+}
