@@ -54,11 +54,11 @@ c.addEventListener('pointermove',e=>{if(!running||paused||!holding)return;e.prev
 function release(e){holding=false;anchor=null}c.addEventListener('pointerup',release);c.addEventListener('pointercancel',release);c.addEventListener('lostpointercapture',release);
 startBtn.addEventListener('click',()=>{if(done)reset();start()});document.querySelector('#restart').addEventListener('click',reset);
 const shopPanel=document.querySelector('#shopPanel'),shopOpen=document.querySelector('#shopOpen'),shopNote=document.querySelector('#shopNote');
-const moreBtn=document.querySelector('#moreBtn'),moreMenu=document.querySelector('#moreMenu'),settingsPanel=document.querySelector('#settingsPanel');
-function closeQuickPanels(){moreMenu.hidden=true;settingsPanel.hidden=true;moreBtn.setAttribute('aria-expanded','false')}
-moreBtn.addEventListener('click',()=>{const opening=moreMenu.hidden;settingsPanel.hidden=true;moreMenu.hidden=!opening;moreBtn.setAttribute('aria-expanded',String(opening))});
+const arena=document.querySelector('.arena'),moreBtn=document.querySelector('#moreBtn'),moreMenu=document.querySelector('#moreMenu'),settingsPanel=document.querySelector('#settingsPanel');
+function closeQuickPanels(){arena.classList.remove('quick-open');settingsPanel.hidden=true;moreBtn.setAttribute('aria-expanded','false')}
+moreBtn.addEventListener('click',()=>{const opening=!arena.classList.contains('quick-open');settingsPanel.hidden=true;arena.classList.toggle('quick-open',opening);moreBtn.setAttribute('aria-expanded',String(opening));moreBtn.setAttribute('aria-label',opening?'Close menu':'More options')});
 document.querySelector('#menuShop').addEventListener('click',()=>{closeQuickPanels();shopPanel.hidden=false;holding=false;anchor=null;refreshShop()});
-document.querySelector('#menuSettings').addEventListener('click',()=>{moreMenu.hidden=true;settingsPanel.hidden=false;moreBtn.setAttribute('aria-expanded','false')});
+document.querySelector('#menuSettings').addEventListener('click',()=>{closeQuickPanels();settingsPanel.hidden=false});
 document.querySelector('#settingsClose').addEventListener('click',()=>{settingsPanel.hidden=true});
 document.querySelector('#menuRestart').addEventListener('click',()=>{closeQuickPanels();reset()});
 document.querySelector('#soundToggle').addEventListener('change',e=>{soundEnabled=e.target.checked;applySoundSettings()});
