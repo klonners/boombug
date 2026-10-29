@@ -148,3 +148,16 @@ main{width:min(100%,650px);position:relative}header,.stats,.controls,.help{displ
 @media(max-width:390px){
   .moreMenu .quickIcon .cartIcon,.moreMenu .quickIcon .userGearIcon{font-size:22px!important}
 }
+
+
+/* Folder-upload icon for Skins & Packs quick-menu item. */
+.moreMenu .uploadFolderIcon{
+  display:block!important;
+  font-style:normal!important;
+  font-size:25px!important;
+  line-height:1!important;
+  color:#fff!important;
+}
+@media(max-width:390px){
+  .moreMenu .uploadFolderIcon{font-size:22px!important}
+}
