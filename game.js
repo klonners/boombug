@@ -68,6 +68,10 @@ document.querySelector('#settingsClose').addEventListener('click',()=>{settingsP
 document.querySelector('#skinClose').addEventListener('click',()=>{skinPanel.hidden=true;document.querySelector('#menuUpload').classList.remove('section-active')});
 document.querySelector('#pauseRestart').addEventListener('click',()=>{pauseMenu.classList.remove('visible');reset()});
 
+document.querySelector('#killSfxToggle').addEventListener('change',e=>{killSfxEnabled=e.target.checked;applySoundSettings()});
+document.querySelector('#bgmToggle').addEventListener('change',e=>{if(e.target.checked){startBgm()}else{stopBgm()}});
+document.querySelector('#accomplishedToggle').addEventListener('change',e=>{soundEnabled=e.target.checked;applySoundSettings()});
+
 document.querySelector('#bgmVolumeSlider').addEventListener('input',e=>{bgmVolume=Number(e.target.value)/100;document.querySelector('#bgmVolumeValue').textContent=e.target.value+'%';applySoundSettings()});
 
 const skinImageFile=document.querySelector('#skinImageFile'),skinImageStatus=document.querySelector('#skinImageStatus'),removeSkinImage=document.querySelector('#removeSkinImage'),resourcePackFile=document.querySelector('#resourcePackFile'),resourcePackStatus=document.querySelector('#resourcePackStatus'),removeResourcePack=document.querySelector('#removeResourcePack'),packSfxFile=document.querySelector('#packSfxFile'),packSfxStatus=document.querySelector('#packSfxStatus'),previewPackSfx=document.querySelector('#previewPackSfx'),removePackSfx=document.querySelector('#removePackSfx');
