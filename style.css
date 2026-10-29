@@ -50,3 +50,11 @@ main{width:min(100%,650px);position:relative}header,.stats,.controls,.help{displ
 .moreMenu button:hover{background:#15394a}
 @media(max-width:390px){.moreMenu{right:76px;gap:4px}.moreMenu button{padding:9px 8px;font-size:.74rem}.moreBtn{width:52px;height:52px;right:12px}.pauseBtn{width:52px;height:52px;right:72px}.arena.quick-open .moreMenu{max-width:calc(100% - 74px)}}
 @media(prefers-reduced-motion:reduce){.moreBtn,.pauseBtn,.menuDots,.menuCross,.moreMenu{transition:none}}
+
+.customSfx{padding:12px 0;border-top:1px solid #ffffff18;display:grid;gap:8px}
+.customSfx>label{font-size:.9rem;font-weight:750}
+.customSfx input[type=file]{width:100%;max-width:100%;font-size:.78rem;color:#b9ced8}
+.customSfx small{font-size:.72rem;color:#9bb8c8;overflow-wrap:anywhere}
+.customSfxActions{display:flex;gap:8px}
+.customSfxActions button{border:1px solid #ffffff25;border-radius:10px;background:#15394a;color:#edfaff;padding:8px 12px;font-weight:750}
+.customSfxActions button:disabled{opacity:.4}
