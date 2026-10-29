@@ -185,3 +185,16 @@ main{width:min(100%,650px);position:relative}header,.stats,.controls,.help{displ
 .settingsPanel{--panel-pointer-right:24px}
 .userSettingsPanel{--panel-pointer-right:66px}
 .skinPanel{--panel-pointer-right:148px}
+
+
+/* Point each open panel toward the selected menu icon, not toward the close (X) button. */
+.settingsPanel{--panel-pointer-right:107px}
+.userSettingsPanel{--panel-pointer-right:191px}
+.shopPanel{--panel-pointer-right:275px}
+.skinPanel{--panel-pointer-right:359px}
+@media(max-width:390px){
+  .settingsPanel{--panel-pointer-right:89px}
+  .userSettingsPanel{--panel-pointer-right:154px}
+  .shopPanel{--panel-pointer-right:219px}
+  .skinPanel{--panel-pointer-right:284px}
+}
