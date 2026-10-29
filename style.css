@@ -216,3 +216,11 @@ main{width:min(100%,650px);position:relative}header,.stats,.controls,.help{displ
 .soundFeature .customSfx>label{font-size:.82rem}
 .soundSection>.settingRow{padding-top:12px}
 @media(max-width:390px){.soundFeature{padding:10px}.soundSelect{padding:10px;font-size:.8rem}}
+
+/* Simple sound groups with independent volume controls. */
+.soundFeatureTitle{font-size:.95rem;font-weight:900;margin-bottom:10px;color:#f1fbff}
+.soundVolume{display:block;margin-top:14px!important}
+.soundVolume span{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:9px}
+.soundVolume input[type=range],#otherVolumeSlider{width:100%;accent-color:#73f5cd}
+.soundSection>.settingRow{display:block}
+.soundSection>#otherVolumeSlider{margin-top:4px}
