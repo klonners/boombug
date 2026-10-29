@@ -238,3 +238,14 @@ main{width:min(100%,650px);position:relative}header,.stats,.controls,.help{displ
 .soundToggleRow span{display:block;flex:1;min-width:0}
 .soundToggleRow input{display:block!important;margin:0!important;padding:0!important}
 
+
+
+/* User ID and portable progress save controls */
+.profileIdRow{display:flex;align-items:center;gap:8px;width:100%}
+.profileIdRow .playerNameInput{flex:1;min-width:0}
+.profileSmallBtn{width:auto!important;white-space:nowrap;padding:10px 12px!important}
+.progressSaveSection{display:grid;gap:10px;margin-top:16px;padding:14px;border:1px solid #ffffff24;border-radius:14px;background:#0d2635}
+.progressSaveSection>strong{font-size:.95rem;letter-spacing:.04em}
+.progressSaveSection p{margin:0;color:#b8ced8;font-size:.82rem;line-height:1.45}
+.progressFileInput{width:100%;min-width:0;color:#eafaff;font-size:.82rem}
+.progressFileInput::file-selector-button{margin-right:8px;padding:9px 10px;border:1px solid #ffffff40;border-radius:9px;background:#243b48;color:#edfaff;font-weight:700}
