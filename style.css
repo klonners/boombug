@@ -224,3 +224,9 @@ main{width:min(100%,650px);position:relative}header,.stats,.controls,.help{displ
 .soundVolume input[type=range],#otherVolumeSlider{width:100%;accent-color:#73f5cd}
 .soundSection>.settingRow{display:block}
 .soundSection>#otherVolumeSlider{margin-top:4px}
+
+
+/* Keep Settings focused: no extra upload controls in the Sound section. */
+.settingsPanel .soundFeature .customSfx{display:none!important}
+.settingsPanel .soundFeatureTitle{margin-bottom:0}
+.settingsPanel .bgmAdjustment .soundFeatureTitle{margin-bottom:10px}
