@@ -72,3 +72,17 @@ main{width:min(100%,650px);position:relative}header,.stats,.controls,.help{displ
 .quickLabel{display:block;max-width:100%;font-size:.78rem;font-weight:800;color:#edfaff;text-shadow:0 1px 5px #000}
 @media(max-width:390px){.pauseBtn{right:72px!important;width:52px;height:52px}.moreBtn{right:12px!important;width:52px;height:52px}.moreMenu{top:76px!important;left:8px!important;right:8px!important;gap:4px}.quickIcon{width:62px;height:62px;font-size:28px}.quickLabel{font-size:.72rem}}
 @media(prefers-reduced-motion:reduce){.quickIcon{transition:none}}
+
+
+/* Menus open beside their trigger controls, not as a row below. */
+.moreMenu{top:14px!important;right:82px!important;left:auto!important;width:auto!important;max-width:calc(100% - 154px)!important;justify-content:flex-end!important;gap:10px!important;padding:0!important;transform:translateX(10px) scale(.96)!important}
+.arena.quick-open .moreMenu{transform:translateX(0) scale(1)!important}
+.moreMenu button{flex:0 0 auto!important;max-width:none!important;width:74px!important;gap:5px!important}
+.quickIcon{width:54px!important;height:54px!important;font-size:25px!important}
+.quickLabel{font-size:.7rem!important}
+.pauseMenu{position:absolute;z-index:9;top:82px;right:82px;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-6px);transition:opacity .2s ease,transform .2s ease,visibility .2s}
+.pauseMenu.visible{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.pauseMenu button{display:flex;align-items:center;gap:9px;padding:11px 15px;border:1px solid #73f5cd77;border-radius:13px;background:#102b3af5;color:#edfaff;font:800 .9rem system-ui;box-shadow:0 6px 18px #0007;white-space:nowrap}
+.pauseMenu button span{font-size:1.35rem}
+.arena.quick-open .pauseBtn{opacity:0!important;pointer-events:none!important}
+@media(max-width:390px){.moreMenu{right:70px!important;max-width:calc(100% - 92px)!important;gap:3px!important}.moreMenu button{width:62px!important}.quickIcon{width:46px!important;height:46px!important;font-size:22px!important}.quickLabel{font-size:.65rem!important}.pauseMenu{right:70px;top:76px}}
