@@ -115,24 +115,3 @@ main{width:min(100%,650px);position:relative}header,.stats,.controls,.help{displ
 @media(max-width:390px){.menuDots,.menuCross{font-size:23px;width:26px;height:26px}}
 
 .shopBtn .cartIcon{font-size:27px;line-height:1;display:block;font-style:normal}
-
-
-/* Show the shopping cart control beside the other top controls. */
-.shopBtn{display:grid!important;right:236px!important;top:14px!important;width:58px;height:58px;z-index:5}
-.shopBtn .cartIcon{font-size:27px;line-height:1;display:block;font-style:normal}
-@media(max-width:390px){.shopBtn{right:202px!important;width:52px;height:52px}}
-
-
-/* User Settings profile panel and Flaticon menu icons. */
-.userSettingsPanel{position:absolute;z-index:10;top:82px;right:12px;width:min(320px,calc(100% - 24px));padding:16px;border:1px solid #73f5cd55;border-radius:18px;background:#081a27f7;box-shadow:0 12px 36px #0009;color:#edfaff;text-align:left;touch-action:pan-y}
-.userSettingsPanel[hidden]{display:none}
-.userSettingsPanel .settingsHead{gap:8px}
-.userSettingsPanel .settingsHead strong{display:flex;align-items:center;gap:8px}
-.userNameField{display:block;margin:8px 0;font-size:.86rem;font-weight:750;color:#c5e1ec}
-.playerNameInput{width:100%;padding:12px;border:1px solid #ffffff30;border-radius:11px;background:#102b3a;color:#fff;font:inherit;outline:none}
-.playerNameInput:focus{border-color:#73f5cd}
-.saveUserSettings{margin-top:10px;width:100%;border:0;border-radius:11px;padding:11px;background:#73f5cd;color:#06221d;font-weight:900;cursor:pointer}
-.userSettingsPanel>small{display:block;margin-top:10px;color:#9bb8c8;font-size:.75rem;line-height:1.4}
-.userGearIcon,.settingsIcon{font-size:25px;line-height:1;display:block;font-style:normal}
-.moreMenu .quickIcon .userGearIcon,.moreMenu .quickIcon .settingsIcon{font-size:25px}
-@media(max-width:390px){.userSettingsPanel{top:74px;padding:12px}}
