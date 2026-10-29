@@ -106,3 +106,10 @@ main{width:min(100%,650px);position:relative}header,.stats,.controls,.help{displ
 
 /* User skin and resource-pack manager */
 .skinPanel{position:absolute;z-index:10;top:82px;right:12px;width:min(360px,calc(100% - 24px));max-height:calc(100% - 100px);overflow:auto;padding:15px;border:1px solid #73f5cd55;border-radius:18px;background:#081a27f7;box-shadow:0 12px 36px #0009;color:#edfaff;text-align:left;touch-action:pan-y}.skinPanel[hidden]{display:none}.skinHelp,.skinFoot{font-size:.76rem;line-height:1.45;color:#a9c4d0}.skinUpload{padding:12px 0;border-top:1px solid #ffffff1c;display:grid;gap:8px}.skinUpload>label{font-weight:800;font-size:.9rem}.skinUpload input[type=file]{width:100%;font-size:.76rem;color:#c6d9e2}.skinUpload small{font-size:.75rem;color:#9edecb;overflow-wrap:anywhere}.skinActions{display:flex;gap:7px;flex-wrap:wrap}.skinActions button{border:1px solid #ffffff25;border-radius:10px;background:#15394a;color:#edfaff;padding:8px 10px;font-weight:750;font-size:.78rem}.skinActions button:disabled{opacity:.4}.skinFoot code{color:#b9f8dd;overflow-wrap:anywhere}@media(max-width:390px){.skinPanel{top:74px;padding:12px}}
+
+
+/* Flaticon UIcons menu controls with softly rounded rectangular button */
+.moreBtn{border-radius:16px!important}
+.menuDots,.menuCross{font-size:25px;line-height:1;display:flex;align-items:center;justify-content:center;width:28px;height:28px;font-style:normal}
+.menuCross{font-size:25px}
+@media(max-width:390px){.menuDots,.menuCross{font-size:23px;width:26px;height:26px}}
