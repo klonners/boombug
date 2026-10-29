@@ -30,3 +30,23 @@ main{width:min(100%,650px);position:relative}header,.stats,.controls,.help{displ
 .settingVolume input{width:100%;accent-color:#73f5cd}
 .settingsPanel p{font-size:.75rem;color:#9bb8c8;line-height:1.4;margin:10px 0 0}
 @media(max-width:380px){.moreBtn{right:77px;width:52px;height:52px}.moreMenu{right:77px;top:74px}.settingsPanel{top:74px}}
+
+
+/* Compact top controls: only pause + menu remain visible. */
+.shopBtn{display:none}
+.pauseBtn{right:14px;transition:opacity .22s ease,transform .22s ease}
+.moreBtn{right:14px;z-index:8;transition:background .25s ease,border-color .25s ease,transform .25s ease}
+.menuDots,.menuCross{position:absolute;display:block;transition:opacity .22s ease,transform .28s cubic-bezier(.2,.8,.2,1)}
+.menuDots{opacity:1;transform:rotate(0) scale(1)}
+.menuCross{opacity:0;transform:rotate(-90deg) scale(.55);font-size:34px;font-weight:400}
+.arena.quick-open .pauseBtn{opacity:0;transform:scale(.7);pointer-events:none}
+.arena.quick-open .moreBtn{background:#123346;border-color:#73f5cd88}
+.arena.quick-open .menuDots{opacity:0;transform:rotate(90deg) scale(.55)}
+.arena.quick-open .menuCross{opacity:1;transform:rotate(0) scale(1)}
+.moreMenu{position:absolute;z-index:7;top:14px;right:82px;width:auto;max-width:calc(100% - 96px);padding:0;border:0;background:transparent;box-shadow:none;display:flex;align-items:center;gap:6px;visibility:hidden;opacity:0;pointer-events:none;transform:translateX(14px);transition:opacity .22s ease,transform .28s cubic-bezier(.2,.8,.2,1),visibility .22s}
+.moreMenu[hidden]{display:flex}
+.arena.quick-open .moreMenu{visibility:visible;opacity:1;pointer-events:auto;transform:translateX(0)}
+.moreMenu button{flex:0 0 auto;width:auto;white-space:nowrap;border:1px solid #ffffff25;border-radius:13px;padding:10px 12px;background:#25231ef0;color:#edfaff;font:750 .82rem system-ui;box-shadow:0 2px 8px #0004}
+.moreMenu button:hover{background:#15394a}
+@media(max-width:390px){.moreMenu{right:76px;gap:4px}.moreMenu button{padding:9px 8px;font-size:.74rem}.moreBtn{width:52px;height:52px;right:12px}.pauseBtn{width:52px;height:52px;right:72px}.arena.quick-open .moreMenu{max-width:calc(100% - 74px)}}
+@media(prefers-reduced-motion:reduce){.moreBtn,.pauseBtn,.menuDots,.menuCross,.moreMenu{transition:none}}
