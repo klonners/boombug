@@ -161,3 +161,27 @@ main{width:min(100%,650px);position:relative}header,.stats,.controls,.help{displ
 @media(max-width:390px){
   .moreMenu .uploadFolderIcon{font-size:22px!important}
 }
+
+
+/* Keep quick-menu icons visible while a section is open, and point the panel back to its icon. */
+.moreMenu button.section-active .quickIcon{
+  background:#25231ef0!important;
+  border-color:#73f5cd!important;
+  box-shadow:0 0 0 3px #73f5cd22,0 2px 8px #0005!important;
+}
+.shopPanel::before,.settingsPanel::before,.userSettingsPanel::before,.skinPanel::before{
+  content:"";
+  position:absolute;
+  top:-9px;
+  right:var(--panel-pointer-right,24px);
+  width:15px;height:15px;
+  background:#081a27f7;
+  border-left:1px solid #73f5cd66;
+  border-top:1px solid #73f5cd66;
+  transform:rotate(45deg);
+}
+.shopPanel,.settingsPanel,.userSettingsPanel,.skinPanel{overflow:visible}
+.shopPanel{--panel-pointer-right:106px}
+.settingsPanel{--panel-pointer-right:24px}
+.userSettingsPanel{--panel-pointer-right:66px}
+.skinPanel{--panel-pointer-right:148px}
