@@ -23,7 +23,7 @@ main{width:min(100%,650px);position:relative}header,.stats,.controls,.help{displ
 <script>
 (()=> {
 const c=document.querySelector('#game'),ctx=c.getContext('2d'),scoreEl=document.querySelector('#score'),leftEl=document.querySelector('#left'),pressureEl=document.querySelector('#pressure'),overlay=document.querySelector('#overlay'),ot=document.querySelector('#ot'),od=document.querySelector('#od'),startBtn=document.querySelector('#start');
-const W=480,H=600,nozzle={x:240,y:558};let bees=[],particles=[],score=0,holding=false,aim={x:240,y:70},anchor=null,running=false,paused=false,done=false,pressure=0,fuel=1,last=0,raf=0,burst=0,remaining=6;
+const W=480,H=600,nozzle={x:240,y:500};let bees=[],particles=[],score=0,holding=false,aim={x:240,y:70},anchor=null,running=false,paused=false,done=false,pressure=0,fuel=1,last=0,raf=0,burst=0,remaining=6;
 const rand=(a,b)=>a+Math.random()*(b-a),clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 function spawnBee(){return{x:rand(135,345),y:rand(260,430),vx:rand(35,70)*(Math.random()<.5?-1:1),vy:rand(18,38)*(Math.random()<.5?-1:1),r:13,wiggle:rand(0,6.28),hp:0,alive:true}}
 function reset(){cancelAnimationFrame(raf);score=0;remaining=6;pressure=0;fuel=1;anchor=null;holding=false;done=false;running=false;paused=false;document.querySelector('#pause').textContent='Ⅱ';burst=0;particles=[];bees=Array.from({length:remaining},spawnBee);sync();draw(0);overlay.style.display='flex';ot.textContent='Aim. Hold. SPLASH! 💦';od.textContent='Water comes from one nozzle at the bottom. Touch and hold, then move your finger to aim the stream. Keep the water on a bee to build pressure and knock it out!';startBtn.textContent='START BLASTING'}
