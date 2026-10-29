@@ -249,3 +249,20 @@ main{width:min(100%,650px);position:relative}header,.stats,.controls,.help{displ
 .progressSaveSection p{margin:0;color:#b8ced8;font-size:.82rem;line-height:1.45}
 .progressFileInput{width:100%;min-width:0;color:#eafaff;font-size:.82rem}
 .progressFileInput::file-selector-button{margin-right:8px;padding:9px 10px;border:1px solid #ffffff40;border-radius:9px;background:#243b48;color:#edfaff;font-weight:700}
+
+
+/* Minimal front poster / single play action */
+.frontScreen{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(ellipse at 50% 38%,#16445a 0%,#081b2b 48%,#030a12 100%);cursor:pointer;padding:20px}
+.frontPoster{position:relative;width:min(100%,480px);height:min(100%,760px);min-height:440px;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;border:1px solid #8fffe54a;border-radius:26px;background:linear-gradient(155deg,#102f42 0%,#06111e 65%,#113b43 100%);box-shadow:0 0 70px #00d8ff1a,inset 0 0 60px #00d8ff0b}
+.posterGlow{position:absolute;width:300px;height:300px;top:22%;border-radius:50%;background:#27e8d22b;filter:blur(34px)}
+.posterTitle{z-index:1;font-size:clamp(3.5rem,15vw,6rem);line-height:.9;font-weight:1000;letter-spacing:-.09em;color:#f3ffff;text-shadow:0 5px 0 #146b70,0 0 30px #49f4d65c}
+.posterTitle span{color:#72f5ce}
+.posterScene{position:relative;z-index:1;width:100%;height:44%;display:grid;place-items:center}
+.posterToilet{font-size:clamp(7rem,30vw,11rem);filter:drop-shadow(0 16px 14px #0008);transform:rotate(-5deg)}
+.posterBug{position:absolute;color:#f8d76b;font-size:2.2rem;text-shadow:0 0 20px #f5bf46}
+.bugOne{top:20%;left:20%;transform:rotate(20deg)}.bugTwo{top:30%;right:19%;font-size:1.7rem}.bugThree{bottom:17%;left:26%;font-size:1.5rem}
+.posterSplash{position:absolute;right:22%;bottom:18%;font-size:3rem;transform:rotate(22deg)}
+.posterTagline{z-index:1;margin-top:5px;font-size:clamp(.85rem,4vw,1.1rem);font-weight:900;letter-spacing:.28em;color:#a7f9eb;text-align:center}
+.frontPlay{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;width:84px;height:84px;border:2px solid #d6fff5;border-radius:50%;display:grid;place-items:center;background:#69f4d9;color:#05221e;font-size:2rem;box-shadow:0 0 0 12px #65f5d923,0 0 42px #48f5d9a6;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.frontPlay i{margin-left:5px}.frontPlay:active{transform:translate(-50%,-50%) scale(.92)}
+@media(max-height:560px){.frontPoster{min-height:0;height:100%;}.posterScene{height:38%}.posterToilet{font-size:6rem}.posterTitle{font-size:3.5rem}.frontPlay{width:68px;height:68px}}
